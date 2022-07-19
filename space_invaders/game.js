@@ -234,7 +234,7 @@ function start_game() {
             this.reload_bar = false;
             this.lifes = 3;
             this.can_hit = true;
-            this.heart_img = 'http://localhost:5000/games/space_invaders/images/heart.png';
+            this.heart_img = 'https://bronze-harp-seal-veil.cyclic.app/games/space_invaders/images/heart.png';
             this.images = [];
             this.is_dead = false;
             this.rects = []
