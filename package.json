@@ -2,16 +2,13 @@
   "name": "games",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
-    "start": "node server.js",
-    "startDev": "nodemon server.js"
+    "start": "node index.js",
+    "startDev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
