@@ -230,7 +230,7 @@ function start_game() {
             })
     
             for (let i = 0; i < cards.length; i++) {
-                cards[i].front_img.src = 'http://localhost:5000/games/memory_game/images/' + images[i] + '.png';
+                cards[i].front_img.src = 'https://bronze-harp-seal-veil.cyclic.app/games/memory_game/images/' + images[i] + '.png';
                 cards[i].front_img.className = 'card-img';
                 cards[i].enabled = true;
                 if (cards[i].is_turned) cards[i].turn_card();
@@ -248,17 +248,17 @@ function start_game() {
                 let img_class = ['top-left-img', 'top-right-img', 'bottom-left-img', 'bottom-right-img'];
                 for (let j = 0; j < 4; j++) {
                     let img = document.createElement('img');
-                    img.src = 'http://localhost:5000/games/memory_game/images/web.png';
+                    img.src = 'https://bronze-harp-seal-veil.cyclic.app/games/memory_game/images/web.png';
                     img.className = img_class[j] + " corner-img";
                     cards_elements[i].appendChild(img);
                 }
                 let img = document.createElement('img');
-                img.src = 'http://localhost:5000/games/memory_game/images/Spider.png';
+                img.src = 'https://bronze-harp-seal-veil.cyclic.app/games/memory_game/images/Spider.png';
                 img.className = 'center-img';
                 cards_elements[i].appendChild(img);
                 
                 img = document.createElement('img');
-                img.src = 'http://localhost:5000/games/memory_game/images/' + images[i] + '.png';
+                img.src = 'https://bronze-harp-seal-veil.cyclic.app/games/memory_game/images/' + images[i] + '.png';
                 img.className = 'card-img';
                 img.style.display = 'none'
             
