@@ -543,7 +543,7 @@ function create_game(params) {
             object.border = params.border ?? false;
             object.bg_color = params.bg_color ?? 'rgba(0,0,0,0)'
             let img = params.image.charAt(0) === '/' ? params.image : '/' + params/image
-            object.image = await load_image("https://bronze-harp-seal-veil.cyclic.app/games/" + img ?? "http://localhost:4000/fish/public/fish.png")
+            object.image = await load_image("https://bronze-harp-seal-veil.cyclic.app/games/" + img ?? "https://bronze-harp-seal-veil.cyclic.app/games/fish/images/fish.png")
             object.width = params.width ?? object.image.width;
             const aspect_ratio = object.image.height/object.image.width
             object.height = params.height ?? object.width * aspect_ratio;
