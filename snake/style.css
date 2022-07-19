@@ -1,0 +1,73 @@
+.game {
+    width: 100%;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.fullscreen .game {
+    aspect-ratio: 1/1;
+    max-width: 80vh;
+    max-height: 80vh;
+    margin-bottom: 50px;
+}
+
+.score {
+    color: black;
+    font-size: 3rem;
+    position: absolute;
+}
+
+#canvas {
+    background-color:rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+    .score {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .score {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .score {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .score {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .score {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .score {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .score {
+        font-size: 0.5rem;
+    }
+}

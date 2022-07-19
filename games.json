@@ -1,0 +1,8 @@
+[
+    { "name": "Memory Game", "link": "/memory_game", "image": "http://localhost:5000/games/memory_game/memory_game.png", "script": "http://localhost:5000/games/memory_game/game.js", "style": "http://localhost:5000/games/memory_game/style.css" }, 
+    { "name": "Snake" , "link": "/snake", "image": "http://localhost:5000/games/snake/snake.png", "script": "http://localhost:5000/games/snake/game.js", "style": "http://localhost:5000/games/snake/style.css" }, 
+    { "name": "Space Invanders", "link": "/space_invaders", "image": "http://localhost:5000/games/space_invaders/space_invaders.png", "script": "http://localhost:5000/games/space_invaders/game.js", "style": "http://localhost:5000/games/space_invaders/style.css" },
+    { "name": "Hangman", "link": "/hangman", "image": "http://localhost:5000/games/hangman/hangman.png", "script": "http://localhost:5000/games/hangman/game.js", "style": "http://localhost:5000/games/hangman/style.css" }, 
+    { "name": "Mines" , "link": "/mines", "image": "http://localhost:5000/games/mines/mines.jpg", "script": "http://localhost:5000/games/mines/game.js", "style": "http://localhost:5000/games/mines/style.css" },
+    { "name": "Dino" , "link": "/dino", "image": "http://localhost:5000/games/dino/dino.png", "script": "http://localhost:5000/games/dino/game.js", "style": "http://localhost:5000/games/dino/style.css" }
+]
