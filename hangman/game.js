@@ -322,7 +322,7 @@ function start_game() {
     function draw_image() {
         const image = new Image(300, 300);
         let image_name = lifes+1;
-        image.src = 'http://localhost:5000/games/hangman/images/'+image_name+'.png';
+        image.src = 'https://bronze-harp-seal-veil.cyclic.app/games/hangman/images/'+image_name+'.png';
         ctx.drawImage(image, -50, -50);
     }
 
