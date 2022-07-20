@@ -9,7 +9,7 @@ app.use('/games', express.static(__dirname + '/'))
 
 app.get("/", (req, res) => {
     const games = require('./games.json')
-    res.status(200).json(games)
+    res.status(200).json(games.filter(game => !game.dev))
 })
 
 app.get("/latest", (req, res) => {
