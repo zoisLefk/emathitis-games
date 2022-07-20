@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/latest", (req, res) => {
     const games = require('./games.json')
-    res.status(200).json(games.slice(-6))
+    res.status(200).json(games.filter(game => !game.dev).slice(-6))
 })
 
 const PORT = 5000
