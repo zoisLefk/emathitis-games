@@ -561,6 +561,14 @@ function create_game(params) {
         return { ...object, ...params.variables }
     }
 
+    function delete_game_object(name) {
+        if (name === undefined) return
+        const idx = game_objects.indexOf(get_game_object(name))
+        if (idx === -1) return
+        delete game_objects[idx]
+        game_objects.splice(idx, 1)
+    }
+
     function sort(a, b) {
         if (a.z_index < b.z_index) return -1
         else if (a.z_index > b.z_index) return 1
@@ -690,7 +698,7 @@ function create_game(params) {
         if (!object) return false
         const collider = get_collider_by_name(collider_name)
         if (!collider) return false
-
+        
         if (!collider.overlap) return false
 
         if (object.x+object.width/2 >= collider.x-collider.width/2 && object.x-object.width/2 <= collider.x+collider.width/2
@@ -840,6 +848,9 @@ function create_game(params) {
         const object = get_game_object(name)
         if (!object) return
         object.velocity.x = step
+        const collider = get_collider_by_name(name)
+        if (!collider) return
+        collider.x = object.x
     }
 
     function move_y(name, step) {
@@ -1198,6 +1209,10 @@ function create_game(params) {
 
         draw();
         if (variables.is_running) {
+            if (params.on_start) {
+                params.on_start(game)
+                params.on_start = undefined
+            }
             update_game()
             variables.game_frame++;
         }
@@ -1244,6 +1259,14 @@ function create_game(params) {
         })
     }
 
+    function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
+    
     function random_position(params) {
         if (params === undefined) params = {};
         const maxX = params.maxX ?? variables.maxX
@@ -1251,6 +1274,10 @@ function create_game(params) {
         const maxY = params.maxY ?? variables.maxY
         const minY = params.minY ?? variables.minY
         return { x: Math.floor(Math.random() * (maxX - minX))+minX, y: Math.floor(Math.random() * (maxY - minY))+minY }
+    }
+
+    function random_number(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min
     }
 
     function custom_object_is_overlaped(object_name, collider) {
@@ -1310,6 +1337,7 @@ function create_game(params) {
         create_ellipse,
         create_collider,
         create_sprite_sheet,
+        delete_game_object,
         get_game_object,
         get_game_objects,
         remove_game_object,
@@ -1326,12 +1354,14 @@ function create_game(params) {
         set_gravity,
         jump,
         is_overlaped,
+        sleep,
         random_position,
         custom_object_is_overlaped,
         object_is_hovered,
         create_sound,
         play_sound,
-        stop_sound
+        stop_sound,
+        random_number
     })
     
     preload()
