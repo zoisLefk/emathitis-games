@@ -1,17 +1,13 @@
-try {
-    create_game({
-        start,
-        on_start,
-        update,
-        running: true,
-        speed: 1,
-        max_speed: 20,
-        obstacles: [],
-        minx: -1400
-    })
-} catch {
-    window.location.reload()
-}
+create_game({
+    start,
+    on_start,
+    update,
+    running: true,
+    speed: 1,
+    max_speed: 20,
+    obstacles: [],
+    minx: -1400
+})
 
 function start(game) {
     create_dino(game)
@@ -26,10 +22,10 @@ function update(game) {
     const { variables } = game
     
     move_obstacles(game)
-    chec_lose(game)
+    check_lose(game)
 }
 
-function chec_lose(game) {
+function check_lose(game) {
     const { variables, is_overlaped, stop_game } = game
 
     variables.obstacles.forEach(name => {

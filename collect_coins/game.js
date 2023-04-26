@@ -1,22 +1,17 @@
-try {
-    create_game({
-        start,
-        update,
-        coins: 0,
-        coin_names: [],
-        bg_color: 'blue',
-        bg_move: true,
-        player_x: 0.3,
-        bg_move_speed: 0.7,
-        minY: -960,
-        maxY: 960,
-        fps: 60,
-        on_restart,
-    })
-} catch(err) {
-    window.location.reload()
-    console.error(err);
-}
+create_game({
+    start,
+    update,
+    coins: 0,
+    coin_names: [],
+    bg_color: 'blue',
+    bg_move: true,
+    player_x: 0.3,
+    bg_move_speed: 0.7,
+    minY: -960,
+    maxY: 960,
+    fps: 60,
+    on_restart,
+})
 
 function on_restart(game) {
     const { variables } = game

@@ -1,25 +1,20 @@
-try {
-    create_game({
-        start,
-        update,
-        running: false,
-        rect_size: 100,
-        row: 8,
-        col: 8,
-        rects: [],
-        env: [],
-        positions: [],
-        mines_length: 10,
-        colors: ['green', 'blue', 'red', 'yellow', 'orange', 'white', 'gray', 'purple'],
-        texts: [],
-        mines_mark: [],
-        flag: false,
-        first: true
-    })
-} catch(err) {
-    console.error(err);
-    window.location.reload()
-}
+create_game({
+    start,
+    update,
+    running: false,
+    rect_size: 100,
+    row: 8,
+    col: 8,
+    rects: [],
+    env: [],
+    positions: [],
+    mines_length: 10,
+    colors: ['green', 'blue', 'red', 'yellow', 'orange', 'white', 'gray', 'purple'],
+    texts: [],
+    mines_mark: [],
+    flag: false,
+    first: true
+})
 
 function start(game) {
     load_images(game)

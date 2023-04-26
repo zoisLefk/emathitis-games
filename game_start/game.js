@@ -1,11 +1,7 @@
-try {
-    create_game({
-        start,
-        update,
-    })
-} catch {
-    window.location.reload()
-}
+create_game({
+    start,
+    update,
+})
 
 function start(game) {
     const { create_text } = game
